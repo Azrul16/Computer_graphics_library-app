@@ -1,8 +1,28 @@
-## Computer Graphics Library App
+<div align="center">
 
-Minimal guide to install Code::Blocks with MinGW and use `graphics.h` / `libbgi.a` from this repo.
+<h2>Computer Graphics Library App</h2>
 
-Files in this repository:
+<p>
+  <a href="https://github.com/Azrul16/Computer_graphics_library-app/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/Azrul16/Computer_graphics_library-app?style=for-the-badge">
+  </a>
+  <a href="https://github.com/Azrul16/Computer_graphics_library-app/fork">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Azrul16/Computer_graphics-library-app?style=for-the-badge">
+  </a>
+  <a href="https://github.com/Azrul16/Computer_graphics_library-app/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/Azrul16/Computer_graphics_library-app?style=for-the-badge">
+  </a>
+</p>
+
+<p>
+  Minimal setup guide to run classic <code>graphics.h</code> / WinBGIm programs on Windows using Code::Blocks and MinGW.
+</p>
+
+</div>
+
+---
+
+### Files in this repository
 
 - `graphics.h`
 - `winbgim.h`
@@ -98,15 +118,14 @@ Settings → Compiler → Toolchain executables
 Settings → Compiler and debugger
 ```
 
-2. Select **GNU GCC Compiler** on the left.  
-3. Open the **Linker settings** tab.  
-4. On the **left** (Link libraries) click **Add…** and select:
+2. Open the **Linker settings** tab.  
+3. On the **left** (Link libraries) click **Add…** and select:
 
 ```text
 <CodeBlocks>\MinGW\lib\libbgi.a
 ```
 
-5. On the **right** (Other linker options) add these lines:
+4. On the **right** (Other linker options) add these lines:
 
 ```text
 -lgdi32
@@ -116,7 +135,7 @@ Settings → Compiler and debugger
 -lole32
 ```
 
-6. Click **OK**.
+5. Click **OK**.
 
 ---
 
@@ -145,3 +164,15 @@ Then:
 2. Run the project (`Build → Run`).
 
 If everything is correct, a graphics window opens and shows a circle.
+
+---
+
+## About
+
+- **Author**: Azrul Amaline  
+- **GitHub**: [@Azrul16](https://github.com/Azrul16)
+
+If this repository helps you run your computer graphics lab programs:
+
+- **Star this repo** on GitHub to support the project.  
+- **Share it** with classmates who need an easy `graphics.h` setup.
