@@ -16,9 +16,9 @@ These files are needed to compile and run old-style BGI graphics programs such a
 
 ---
 
-## Download the Full App Package
+## Download Code::Blocks (Installer Only)
 
-You can download the full setup package (Code::Blocks + MinGW + graphics files + examples) from this Google Drive link:
+You can download the **Code::Blocks installer** from this Google Drive link:
 
 **Google Drive (faculty accounts only):**  
 [Computer Graphics Setup Package](https://drive.google.com/file/d/1Yg1jN4tSHLdc7WDKJ8hpazwQpTk49bMT/view?usp=sharing)
@@ -36,17 +36,14 @@ To download successfully:
 
 ---
 
-## What Is Inside the Package
+## What Is Inside the Drive File
 
-The full package may include:
+The Google Drive link currently contains:
 
-- Code::Blocks IDE
-- MinGW compiler toolchain
-- `graphics.h`
-- `winbgim.h`
-- `libbgi.a`
-- Example graphics programs
-- Pre-configured environment for running computer graphics lab code
+- Code::Blocks IDE installer (`.exe`)
+
+> **Note:** MinGW, `graphics.h`, `winbgim.h`, `libbgi.a`, and any example programs are **not** inside the Drive file.  
+> The BGI files (`graphics.h`, `winbgim.h`, `libbgi.a`) are provided **in this GitHub repository**.
 
 ---
 
@@ -63,27 +60,20 @@ Before installation, make sure you have:
 
 ## Installation Guide
 
-### Step 1: Download the Package
+### Step 1: Download Code::Blocks
 
 1. Open the Google Drive link  
    [Computer Graphics Setup Package](https://drive.google.com/file/d/1Yg1jN4tSHLdc7WDKJ8hpazwQpTk49bMT/view?usp=sharing)
 2. Sign in using your **faculty Gmail**
-3. Download the ZIP or setup file
-4. Extract the files to any folder, for example:
-
-```text
-D:\Computer_Graphics_Setup
-```
+3. Download the Code::Blocks installer (`.exe`)
 
 ---
 
 ### Step 2: Install Code::Blocks
 
-If the downloaded package includes a Code::Blocks installer:
-
-1. Run the Code::Blocks installer
+1. Run the Code::Blocks installer you downloaded
 2. Follow the installation wizard
-3. If possible, choose the version that includes **MinGW**
+3. If there is an option, choose the version that includes **MinGW** (recommended)
 4. Complete installation
 
 Recommended installation path:
@@ -236,6 +226,37 @@ Linker settings
 ```
 
 Click **OK** to save.
+
+---
+
+### (Alternative) Add `libbgi.a` from Settings → Compiler and debugger
+
+You can also add the BGI library globally (for all projects):
+
+1. In Code::Blocks, go to:
+
+```text
+Settings → Compiler and debugger
+```
+
+2. Select your compiler (usually "GNU GCC Compiler") on the left  
+3. Go to the **Linker settings** tab  
+4. On the **left** side under "Link libraries", click **Add…**  
+5. Browse to the folder where `libbgi.a` is located (for example `D:\Program Files\CodeBlocks\MinGW\lib`)  
+6. Select `libbgi.a` and click **Open**  
+7. On the **right** side under "Other linker options", add these (one per line):
+
+```text
+-lgdi32
+-lcomdlg32
+-luuid
+-loleaut32
+-lole32
+```
+
+8. Click **OK** to save.  
+
+After this, new projects will already know about `libbgi.a` and you usually only need to include `graphics.h` in your code.
 
 ---
 
