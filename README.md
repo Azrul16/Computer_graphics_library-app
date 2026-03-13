@@ -7,7 +7,7 @@
     <img alt="GitHub stars" src="https://img.shields.io/github/stars/Azrul16/Computer_graphics_library-app?style=for-the-badge">
   </a>
   <a href="https://github.com/Azrul16/Computer_graphics_library-app/fork">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Azrul16/Computer_graphics-library-app?style=for-the-badge">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/Azrul16/Computer_graphics_library-app?style=for-the-badge">
   </a>
   <a href="https://github.com/Azrul16/Computer_graphics_library-app/issues">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/Azrul16/Computer_graphics_library-app?style=for-the-badge">
